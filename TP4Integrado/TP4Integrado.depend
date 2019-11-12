@@ -1,0 +1,51 @@
+# depslib dependency file v1.0
+1573560962 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/Controller.c
+	"Controller.h"
+
+1573560962 /home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/Controller.h
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+
+1573560962 /home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/parser.h
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1573559813 /home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/LinkedList.h
+
+1573560962 /home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/Employee.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputs.h"
+
+1573559807 /home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/inputs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<unistd.h>
+	<time.h>
+
+1573560962 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/Employee.c
+	"Employee.h"
+
+1573559807 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/inputs.c
+	"inputs.h"
+
+1573561035 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/LinkedList.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1573560962 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/main.c
+	<stdio.h>
+	<stdlib.h>
+	"Controller.h"
+
+1573560962 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/parser.c
+	"parser.h"
+
