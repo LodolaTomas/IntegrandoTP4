@@ -29,7 +29,8 @@ int main()
     int opcion;
     int respuesta;
     int flag=0;
-    LinkedList* listaEmpleados = ll_newLinkedList();;
+    LinkedList* listaEmpleados = ll_newLinkedList();
+    LinkedList* listaEliminados= ll_newLinkedList();
     int id;
 
     do
@@ -48,6 +49,7 @@ int main()
                 case 0:
                     flag=1;
                     printf("Cargado exitosamente en Texto\n");
+                    controller_loadFromText("removeEmployee.txt",listaEliminados);//creo una lista de empleados Eliminados
                     controller_GetLastId(listaEmpleados,&id);
                     break;
                 case 1:
@@ -90,6 +92,12 @@ int main()
             break;
         case 3:
             borrar();
+            /*Employee* unEmpleado=employee_new();
+            employee_setId(unEmpleado,1009);
+            employee_setNombre(unEmpleado,"FLORENCIA");
+            employee_setSueldo(unEmpleado,20);
+            employee_setHorasTrabajadas(unEmpleado,10);
+            ll_push(listaEmpleados,2,unEmpleado);*/
             if(flag!=0)
             {
                 respuesta=controller_addEmployee(listaEmpleados,&id);
@@ -150,7 +158,7 @@ int main()
             borrar();
             if(flag!=0)
             {
-                respuesta=controller_removeEmployee(listaEmpleados);
+                respuesta=controller_removeEmployee(listaEmpleados,listaEliminados);
                 switch(respuesta)
                 {
                 case -1:
@@ -181,7 +189,7 @@ int main()
             borrar();
             if(flag!=0)
             {
-                if(controller_ListEmployee(listaEmpleados)==0)
+                if(controller_ListEmployee(listaEliminados)==0)
                 {
                     printf("Listado realizado con Exito\n");
                 }
@@ -214,6 +222,7 @@ int main()
                 if(controller_saveAsText("data.csv",listaEmpleados)==0)
                 {
                     printf("Ha sido guardado Exitosamente\n");
+                    controller_saveAsText("removeEmployee.txt",listaEliminados);
                     ll_clear(listaEmpleados);
                     flag=0;
                 }

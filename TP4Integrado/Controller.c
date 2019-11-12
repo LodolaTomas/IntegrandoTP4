@@ -115,13 +115,13 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
  * \return int
  *
  */
-int controller_removeEmployee(LinkedList* pArrayListEmployee)
+int controller_removeEmployee(LinkedList* pArrayListEmployee,LinkedList* pArrayRemoveEmployee)
 {
     int state=-1;
     int answer;
     Employee* this=NULL;
 
-    if(pArrayListEmployee!=NULL)
+    if(pArrayListEmployee!=NULL && pArrayRemoveEmployee!=NULL)
     {
         state=0;//0 si no se encontro al empleado buscado
         answer=controller_FindId(pArrayListEmployee);
@@ -136,7 +136,10 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
             if(verifyConformity("Esta seguro de Borrar este Empleado?[Si/No]: ","Error, [Si/No]")==1)
             {
                 state=2;//2 si el empleado se borro
-                ll_remove(pArrayListEmployee,answer);
+                //ll_remove(pArrayListEmployee,answer);
+                this=ll_pop(pArrayListEmployee,answer);///Hecho solo para utilizar el LinkedList
+                ll_add(pArrayRemoveEmployee,this);
+
             }
         }
     }
@@ -167,12 +170,12 @@ int controller_ListEmployee(LinkedList* pArrayListEmployee)
         {
             this=(Employee*)ll_get(pArrayListEmployee,i);//Obtengo un Empleado segun id y lo muestro
             employee_ShowOneEmployee(this);
-            /*
+
             if(i!=0 && i%150==0)
             {
                     pausa();
             }
-            */
+
         }
         printf("**************************************************************************************\n");
         state=0;
@@ -201,7 +204,7 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
         do
         {
             printf("%30s\n","ORDENAR");
-            getValidInt("1. ID\n2. Nombre\n3. Horas Trabajadas\n4. Sueldo\n5. Salir\nElija una opcion: ","Error, Solo numeros",1,5,&opcion);
+            getValidInt("1. ID\n2. Nombre\n3. Horas Trabajadas\n4. Sueldo\n5. prueba\n6. Salir\nElija una opcion: ","Error, Solo numeros",1,6,&opcion);
             switch(opcion)
             {
             case 1:
@@ -249,12 +252,15 @@ int controller_sortEmployee(LinkedList* pArrayListEmployee)
                 pausa();
                 break;
             case 5:
+
+                break;
+            case 6:
                 ll_deleteLinkedList(pArrayListEmployee2);//borro la lista para que no moleste
                 break;
             }
             borrar();
         }
-        while(opcion!=5);
+        while(opcion!=6);
         state=0;//si el ordenado se realizo con exito
     }
     return state;

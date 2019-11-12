@@ -49,3 +49,53 @@
 1573560962 source:/home/alumno/Escritorio/IntegrandoTP4/TP4Integrado/parser.c
 	"parser.h"
 
+1573566941 source:c:\users\alumno\desktop\integrandotp4\tp4integrado\controller.c
+	"Controller.h"
+
+1573566180 c:\users\alumno\desktop\integrandotp4\tp4integrado\controller.h
+	<stdio.h>
+	<stdlib.h>
+	"parser.h"
+
+1573564048 c:\users\alumno\desktop\integrandotp4\tp4integrado\parser.h
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"Employee.h"
+
+1573564047 c:\users\alumno\desktop\integrandotp4\tp4integrado\linkedlist.h
+
+1573564047 c:\users\alumno\desktop\integrandotp4\tp4integrado\employee.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputs.h"
+
+1573564047 c:\users\alumno\desktop\integrandotp4\tp4integrado\inputs.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<unistd.h>
+	<time.h>
+
+1573564047 source:c:\users\alumno\desktop\integrandotp4\tp4integrado\employee.c
+	"Employee.h"
+
+1573564095 source:c:\users\alumno\desktop\integrandotp4\tp4integrado\inputs.c
+	"inputs.h"
+
+1573564047 source:c:\users\alumno\desktop\integrandotp4\tp4integrado\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1573567086 source:c:\users\alumno\desktop\integrandotp4\tp4integrado\main.c
+	<stdio.h>
+	<stdlib.h>
+	"Controller.h"
+
+1573564048 source:c:\users\alumno\desktop\integrandotp4\tp4integrado\parser.c
+	"parser.h"
+

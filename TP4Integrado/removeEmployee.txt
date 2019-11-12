@@ -1,0 +1,3 @@
+id,nombre,horasTrabajadas,Salario
+1000,Saleem,60,20000
+12,Cordelie,325,50000

@@ -297,11 +297,11 @@ void getValidSex(char* letter)
 }
 void pausa()
 {
-    system("read -p 'Press Enter to continue...' var");
-    //system("pause");
+    //system("read -p 'Press Enter to continue...' var");
+    system("pause");
 }
 void borrar()
 {
-    system("clear");
-    //system("cls");
+    //system("clear");
+    system("cls");
 }
